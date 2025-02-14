@@ -1,0 +1,35 @@
+<div class="how-we-work">
+    <div class="items">
+        <!-- ✅ Show spinner when loading -->
+        <div *ngIf="loading; else content">
+            <div class="spinner"></div> <!-- Custom spinner -->
+        </div>
+
+        <!-- ✅ Content Section -->
+        <ng-template #content>
+            <div class="item">
+                <ng-container *ngFor="let item of breakfastItems$ | async; let i = index; trackBy: trackByIndex">
+                    <div class="image-container">
+                        <img [src]="item.strMealThumb" [alt]="item.strMeal" />
+                    </div>
+                </ng-container>
+            </div>
+        </ng-template>
+
+        <div class="button mt-2 d-flex justify-content-center">
+            <button class="btn btn-primary" (click)="scrollToContact()">CONTACT US</button>
+        </div>
+    </div>
+  <div class="row">
+    <div class="col-12 col-lg-4 col-md-4 col-sm-12 bgg">
+      <h1>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the
+      </h1>
+    </div>
+    <div class="col-12 col-lg-8 col-md-8 col-sm-12 bg">
+      <h1>HOW WE<span>WORK</span></h1>
+    </div>
+  </div>
+</div>

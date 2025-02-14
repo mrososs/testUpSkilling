@@ -1,0 +1,67 @@
+.contact {
+  .text-danger{
+    font-size: 1rem;
+    font-weight: normal;
+    margin-left: 3rem;
+    margin-top: 1rem;
+  }
+  .link-contact{
+    img{
+      width: 20px;
+      height: 20px;
+    }
+  }
+  h1 {
+    font-weight: 800;
+    font-size: 6rem;
+    color: #c98a40;
+    text-transform: uppercase;
+  }
+  .form {
+    width: 50%;
+    margin: auto;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  
+    input {
+      padding: 10px;
+      background: #FFD39F;
+      border: 0.3px solid #C98A40;
+      border-radius: 60px;
+      font-size: 16px;
+    }
+    input::placeholder {
+      color: #584125;
+      font-weight: 800;
+      font-size: 14px;
+      opacity: 0.6;
+    }
+  
+    small {
+      color: red;
+      font-size: 12px;
+    }
+  }
+  
+  button {
+    
+    padding: 0.5rem 2rem;
+    font-size: 18px;
+    border-radius: 25px;
+    background: white;
+    border: 2px solid #C98A40;
+    color: #C98A40;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+}

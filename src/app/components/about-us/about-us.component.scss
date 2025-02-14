@@ -1,0 +1,41 @@
+.about-us {
+  position: relative;
+  .chef_image {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    img {
+      width: 400px;
+      height: 500px;
+    }
+  }
+  .bg {
+    background: url("../../../assets/Rectangle\ 265.png");
+    height: fit-content;
+    .text {
+      .btn-primary {
+        @media screen and (min-width: 701px) {
+          padding: 1rem 3rem;
+          font-size: 1.5rem;
+        }
+        background: #fdba10;
+        font-weight: bold;
+        border-radius: 30px;
+        border: none;
+        padding: 0.5rem 1rem;
+      }
+      h1 {
+        font-size: 6rem;
+        line-height: 120px;
+        width: 60%;
+        font-weight: 800;
+        color: white;
+      }
+      p {
+        font-family: "poppins";
+        width: 70%;
+        color: white;
+      }
+    }
+  }
+}

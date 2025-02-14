@@ -1,0 +1,148 @@
+.main__page {
+  position: relative;
+  .bread {
+    @media screen and (min-width: 500px) {
+      position: absolute;
+      h1 {
+        display: none;
+      }
+      top: 20%;
+      left: 25%;
+      .bread {
+        width: 570px;
+        height: 450px;
+      }
+    }
+    .links {
+      @media screen and (min-width: 500px) {
+        display: none !important;
+      }
+      margin-left: 15%;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    position: absolute;
+
+    @media screen and (max-width: 500px) {
+      top: 45%;
+      left: 20%;
+      h1 {
+        display: inline-block;
+        font-size: 1rem;
+
+        font-family: "Poppins", sans-serif !important;
+        color: #c98a40;
+        p {
+          display: inline;
+        }
+        .links {
+        }
+      }
+    }
+    img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  .hero__text {
+    @media screen and (min-width: 500px) {
+      height: 100vh;
+    }
+    background: url("../../../assets/Rectangle\ 264.png");
+
+    color: #ffffff;
+    height: 50vh;
+    .text {
+      h1 {
+        font-weight: 800;
+        @media screen and (min-width: 701px) {
+          font-size: 7rem;
+        }
+        @media screen and (max-width: 700px) {
+          font-size: 2rem;
+        }
+      }
+      p {
+        @media screen and (min-width: 701px) {
+          font-size: 1.2rem;
+          text-align: start;
+          width: 70%;
+        }
+        @media screen and (max-width: 700px) {
+          font-size: 1rem;
+          text-align: center;
+          padding: 1rem;
+        }
+      }
+      .btn-primary {
+        @media screen and (min-width: 701px) {
+          padding: 1rem 3rem;
+          font-size: 1.5rem;
+        }
+        background: #fdba10;
+        font-weight: bold;
+        border-radius: 30px;
+        border: none;
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+  .hero__photo {
+    background: url("../../../assets/Mask\ Group.png");
+
+    @media screen and (min-width: 500px) {
+      height: 100vh;
+    }
+    height: 50vh;
+  }
+}
+.contact {
+  @media screen and (max-width: 500px){
+    display: none;
+  }
+  
+  .links {
+    background: url("../../../assets/Mask\ Group.png");
+    background-size: cover;
+
+    height: 15vh;
+    .img-links {
+      gap: 10px;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  .telephone {
+    background: url("../../../assets/Rectangle\ 264.png");
+    background-size: cover;
+    height: 15vh;
+    position: relative;
+    
+    h1{
+      font-weight: 800;
+      position: absolute;
+      bottom: 0;
+      
+      font-size: 18px;
+      font-family: 'poppins', sans-serif !important;
+      color: #ffffff;
+      p{
+        display: inline-block;
+        font-weight: normal;
+        font-size: 18px;
+        letter-spacing: 2px;
+      }
+    }
+  }
+  .null {
+    background: url("../../../assets/Mask\ Group.png");
+    background-size: cover;
+
+    height: 15vh;
+  }
+}

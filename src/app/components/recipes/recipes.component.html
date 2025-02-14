@@ -1,0 +1,26 @@
+<div class="recipes mt-3">
+    <div class="d-flex justify-content-center align-items-center">
+        <h1>RECIPES</h1>
+    </div>
+
+    <!-- ✅ Show loading spinner while waiting for data -->
+    <div *ngIf="!(breakfastItems$ | async); else recipesContent">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- ✅ Recipes list -->
+    <ng-template #recipesContent>
+        <div class="mt-4 mb-5 d-flex justify-content-center align-items-center flex-wrap">
+            <div class="card m-2" style="width: 15rem;" *ngFor="let item of breakfastItems$ | async; trackBy: trackByIndex">
+                <img [src]="item.strMealThumb" class="card-img-top" [alt]="item.strMeal">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.strMeal }}</h5>
+                    <p class="card-text"> {{ item.strMeal }}</p>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+    <div class="button mt-2 mb-5 d-flex justify-content-center">
+        <button class="btn btn-primary "  (click)="scrollToContact()">CONTACT US</button>
+    </div>
+</div>
