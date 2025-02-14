@@ -1,23 +1,19 @@
 .main__page {
   position: relative;
   .bread {
-    @media screen and (min-width: 500px) {
-      position: absolute;
-      h1 {
-        display: none;
-      }
-      top: 20%;
-      left: 25%;
-      .bread {
-        width: 570px;
-        height: 450px;
-      }
-    }
-    .links {
-      @media screen and (min-width: 500px) {
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  .breadImg{
+    width: 500px;
+    height: 500px;
+  }
+  
+    .links ,.telephone{
+      @media screen and (min-width: 768px) {
         display: none !important;
       }
-      margin-left: 15%;
+      // margin-left: 15%;
 
       img {
         width: 20px;
@@ -26,26 +22,8 @@
     }
     position: absolute;
 
-    @media screen and (max-width: 500px) {
-      top: 45%;
-      left: 20%;
-      h1 {
-        display: inline-block;
-        font-size: 1rem;
-
-        font-family: "Poppins", sans-serif !important;
-        color: #c98a40;
-        p {
-          display: inline;
-        }
-        .links {
-        }
-      }
-    }
-    img {
-      width: 200px;
-      height: 200px;
-    }
+   
+   
   }
   .hero__text {
     @media screen and (min-width: 500px) {
@@ -98,9 +76,22 @@
     }
     height: 50vh;
   }
+  @media screen and (max-width:768px) {
+    .bread{
+      position: absolute;
+      top: 45%;
+      left:30%;
+      .breadImg{
+        width: 300px;
+        height: 300px;
+      }
+      
+    }
+    
+  }
 }
 .contact {
-  @media screen and (max-width: 500px){
+  @media screen and (max-width: 700px){
     display: none;
   }
   
@@ -110,7 +101,7 @@
 
     height: 15vh;
     .img-links {
-      gap: 10px;
+      gap: 5px;
       img {
         width: 20px;
         height: 20px;
