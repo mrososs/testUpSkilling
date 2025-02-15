@@ -1,4 +1,10 @@
 .about-us {
+  @media screen and (max-width: 768px) {
+   .chef_image{
+    display: none;
+   }
+    
+  }
   position: relative;
   .chef_image {
     position: absolute;

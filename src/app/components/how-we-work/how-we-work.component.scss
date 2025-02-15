@@ -1,63 +1,176 @@
 .how-we-work {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
+  overflow: hidden;
+  
+  // Spinner styles
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #fdba10;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 2rem auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
   .items {
-    .item {
-      display: flex;
-      gap: 30px;
-      img {
-        border-radius: 10px;
-        width: 200px;
-        height: 200px;
-      }
-    }
-    .btn-primary {
-      @media screen and (min-width: 701px) {
-        padding: 1rem 3rem;
-        font-size: 1.5rem;
-      }
-      background: #fdba10;
-      font-weight: bold;
-      border-radius: 30px;
-      border: none;
-      padding: 0.5rem 1rem;
+    @media screen and (max-width:768px) {
+      top:40%;
+      
     }
     position: absolute;
-
-    top: 50%;
-    left: 20%;
-  }
-  .bgg {
-    background: url("../../../assets/Mask\ Group.png");
-    background-size: cover;
-    height: 100vh;
-
-    h1 {
-      color: #c98a40;
-      font-family: "Poppins", sans-serif !important;
-      font-size: 18px;
-      text-align: start;
-      margin-top: 10rem;
-      margin-left: 15rem;
-      width: 50%;
+    width: 100%;
+    padding: 1rem;
+    z-index: 2;
+    
+    
+    @media screen and (min-width: 768px) {
+      width: auto;
+      top: 70%;
+      left: 20%;
+      transform: translateY(-50%);
+    }
+    
+    .item {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 1rem;
+      justify-content: center;
+      
+      @media screen and (min-width: 768px) {
+        gap: 30px;
+        margin-top: 2rem;
+        justify-content: flex-start;
+      }
+      
+      .image-container {
+        width: calc(50% - 15px);
+        max-width: 10rem;
+        aspect-ratio: 1;
+        
+        @media screen and (min-width: 768px) {
+          width: 10rem;
+        }
+        
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+          
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+    
+    .button {
+      margin-top: 2rem;
+      
+      .btn-primary {
+        background: #fdba10;
+        font-weight: bold;
+        border-radius: 30px;
+        border: none;
+        padding: 0.5rem 1.5rem;
+        transition: all 0.3s ease;
+        
+        @media screen and (min-width: 701px) {
+          padding: 1rem 3rem;
+          font-size: 1.5rem;
+        }
+        
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(253, 186, 16, 0.3);
+        }
+      }
     }
   }
-  .bg {
-    background: url("../../../assets/Rectangle\ 265.png");
-    background-size: cover;
+  
+  .row {
     height: 100vh;
-    h1 {
-      font-size: 6rem;
-      color: white;
-      font-weight: 800;
+    margin: 0;
+    
+    .bgg {
+      @media screen and (max-width:768px) {
+        display: none;
+        
+      }
+      background: url("../../../assets/Mask\ Group.png");
+      background-size: cover;
+      background-position: center;
+      padding: 1rem;
+      
+      h1 {
+        color: #c98a40;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        text-align: start;
+        margin: 4rem 1rem;
+        width: 90%;
+        
+        @media screen and (min-width: 768px) {
+          font-size: 18px;
+          margin: 8rem 10rem;
+          width: 50%;
+        }
+      }
+    }
+    
+    .bg {
+      @media screen and (min-width:768px) {
+        h2{
+          display: none;
+        }
+      
+        
+      }
+      @media screen and (max-width:768px) {
+        h1{
+          span{
+            display: inline !important;
+            margin-left: 1rem;
+          }
+        }
+        
+      }
+    
+      background: url("../../../assets/Rectangle\ 265.png");
+      background-size: cover;
+      background-position: center;
       position: relative;
-      display: inline;
-      margin-left: 10rem;
-
-      span {
-        display: block;
-        position: absolute;
-        right: 0;
+      
+      h1 {
+        font-size: 3rem;
+        color: white;
+        font-weight: 800;
+        margin: 2rem 1rem;
+        position: relative;
+        
+        @media screen and (min-width: 768px) {
+          font-size: 6rem;
+          margin-left: 10rem;
+          display: inline;
+        }
+        
+        span {
+          display: block;
+          
+          @media screen and (min-width: 768px) {
+            position: absolute;
+            right: 0;
+          }
+        }
       }
     }
   }
